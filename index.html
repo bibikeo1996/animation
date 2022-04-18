@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>Page Title</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.6.0-min.js"></script>
+    <script type="text/javascript" src="js/isMobile.js"></script>
+    <script type="text/javascript" src="js/desktop-script.js"></script>
+    <script type="text/javascript" src="js/mobile-script.js"></script>
+</head>
+<body>
+    <div class="big-content max-width">
+        <button id="moveUp" class="hidebtn"></button>
+        <button id="moveDown" class="hidebtn"></button>
+        <div id="svg-content" class="desktop">
+            <svg id="text-container" width="1140px" height="1681px">
+                <path id="text-curve" d="M-.5 199.5h700m0 0v100m0 0h50v400m0 0h-550m0 0v300m0 0h550m0 0v200m0 0h390"
+                    fill="none" stroke="#000" />
+                <image id="cat" x="-10" y="170" href="img/d-left-right-1.png" transform="translate(-5,0)" />
+            </svg>
+        </div>
+        <div id="svg-content-mobile" class="mobile">
+            <svg id="text-container-mobile" width="360px" height="1681px">
+                <path id="text-curve-mobile"
+                    d="M-.5 299.5h200m0 0v100m0 0h50m0 0v200m0 0h-150m0 0v200m0 0h150m0 0v100m0 0h110" fill="none"
+                    stroke="#000" />
+                <image id="cat-mobile" x="20" y="100" href="img/d-left-right-1.png" transform="translate(-5,0)" />
+            </svg>
+        </div>
+        <div class="infor-content"></div>
+    </div>
+</body>
+<!-- <script src="https://d3js.org/d3.v3.min.js"></script> -->
+<script>
+    if (isMobileDevice()) {
+        //MobileMove();
+        MobilecheckDirect();
+        MobileSVG();
+    } else {
+        DesktopRun();
+        DesktopCheckDirection();
+        DesktopMoveSVG();
+        DesktopSVG();
+    }
+</script>
+
+</html>
